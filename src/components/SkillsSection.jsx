@@ -51,8 +51,8 @@ export const SkillsSection = () => {
               className={cn(
                 "px-5 py-2 rounded-full transition-all duration-300 capitalize hover:scale-105",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground shadow-[0_0_10px_rgba(139,92,246,0.5)]"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary hover:shadow-[0_0_10px_rgba(139,92,246,0.35)]"
+                  ? "bg-primary text-primary-foreground shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary hover:shadow-[0_0_10px_rgba(59,130,246,0.35)]"
               )}
             >
               {category}
