@@ -20,7 +20,7 @@ const projects = [
     image: "/projects/project2.png",
     video: "/projects/PrisonEscapeGame.mp4",
     tags: ["Java", "Swing", "JUnit", "Maven"],
-    demoUrl: "#",
+    demoUrl: null,
     githubUrl: "https://github.com/NelsonDg/Prison-Escape-Game",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     image: "/projects/project3.png",
     video: "/projects/MentalHealthChatbot.mp4",
     tags: ["Python", "Flask", "Gemini API", "SQLite"],
-    demoUrl: "#",
+    demoUrl: null,
     githubUrl: "https://github.com/NelsonDg/Mental-Health-Chatbot",
   },
 ];
@@ -39,7 +39,7 @@ const projects = [
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
           Featured <span className="text-primary"> Projects </span>
@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
               key={key}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover h-full flex flex-col"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 {project.video ? (
                   <video
                     src={project.video}
@@ -90,13 +90,15 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center mt-auto pt-2">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}

@@ -60,17 +60,17 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
+            <h3 className="text-2xl font-semibold mb-6 text-center">
               {" "}
               Contact Information
             </h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
+            <div className="space-y-6">
+              <div className="flex justify-center">
+                <div className="relative w-60 text-center">
+                  <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
                   <h4 className="font-medium"> Email</h4>
                   <a
                     href="mailto:hello@gmail.com"
@@ -80,11 +80,11 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
+              <div className="flex justify-center">
+                <div className="relative w-60 text-center">
+                  <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
                     href="tel:+11234567890"
@@ -94,11 +94,11 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
-                </div>
-                <div>
+              <div className="flex justify-center">
+                <div className="relative w-60 text-center">
+                  <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-primary/10 flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Vancouver, BC, Canada
@@ -108,7 +108,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4 text-center"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a href="https://www.linkedin.com/in/nelson-dang-6409b5386/" target="_blank">
                   <Linkedin />
