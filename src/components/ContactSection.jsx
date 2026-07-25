@@ -148,7 +148,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  nelsondang14@gmail.com
+                  Email
                 </label>
                 <input
                   type="email"

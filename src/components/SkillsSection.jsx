@@ -3,29 +3,29 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Languages
-  { name: "Python", level: 80, category: "languages" },
-  { name: "JavaScript", level: 75, category: "languages" },
-  { name: "TypeScript", level: 65, category: "languages" },
-  { name: "Java", level: 80, category: "languages" },
-  { name: "SQL", level: 70, category: "languages" },
-  { name: "HTML/CSS", level: 70, category: "languages" },
-  { name: "C++", level: 85, category: "languages" },
+  { name: "Python", category: "languages" },
+  { name: "JavaScript", category: "languages" },
+  { name: "TypeScript", category: "languages" },
+  { name: "Java", category: "languages" },
+  { name: "SQL", category: "languages" },
+  { name: "HTML/CSS", category: "languages" },
+  { name: "C++", category: "languages" },
 
   // Frameworks
-  { name: "React", level: 75, category: "frameworks" },
-  { name: "Next.js", level: 70, category: "frameworks" },
-  { name: "Flask", level: 75, category: "frameworks" },
-  { name: "Tailwind CSS", level: 70, category: "frameworks" },
+  { name: "React", category: "frameworks" },
+  { name: "Next.js", category: "frameworks" },
+  { name: "Flask", category: "frameworks" },
+  { name: "Tailwind CSS", category: "frameworks" },
 
   // Tools
-  { name: "Git", level: 90, category: "tools" },
-  { name: "VS Code", level: 90, category: "tools" },
-  { name: "Node.js", level: 75, category: "tools" },
-  { name: "Supabase", level: 75, category: "tools" },
-  { name: "Vercel", level: 75, category: "tools" },
-  { name: "JUnit", level: 75, category: "tools" },
-  { name: "Maven", level: 70, category: "tools" },
-  { name: "JetBrains", level: 70, category: "tools" },
+  { name: "Git", category: "tools" },
+  { name: "VS Code", category: "tools" },
+  { name: "Node.js", category: "tools" },
+  { name: "Supabase", category: "tools" },
+  { name: "Vercel", category: "tools" },
+  { name: "JUnit", category: "tools" },
+  { name: "Maven", category: "tools" },
+  { name: "JetBrains", category: "tools" },
 ];
 
 const categories = ["all", "languages", "frameworks", "tools"];
@@ -60,27 +60,13 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-3 sm:p-6 rounded-lg shadow-xs card-hover"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
+              <h3 className="font-semibold text-sm sm:text-lg text-left"> {skill.name}</h3>
             </div>
           ))}
         </div>
