@@ -10,6 +10,7 @@ const skills = [
   { name: "SQL", category: "languages" },
   { name: "HTML/CSS", category: "languages" },
   { name: "C++", category: "languages" },
+  { name: "Assembly", category: "languages" },
 
   // Frameworks
   { name: "React", category: "frameworks" },
@@ -26,6 +27,7 @@ const skills = [
   { name: "JUnit", category: "tools" },
   { name: "Maven", category: "tools" },
   { name: "JetBrains", category: "tools" },
+  { name: "Linux", category: "tools" },
 ];
 
 const categories = ["all", "languages", "frameworks", "tools"];
